@@ -1,0 +1,132 @@
+body {
+    background-color: black;
+    color: white; /* Set default text color to white */
+    margin: 0;
+    overflow-y: auto; /* Allow vertical scrolling */
+    height: 100vh; /* Full viewport height */
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px; /* Hide it above the viewport */
+    left: 10px;
+    background-color: white;
+    color: black;
+    padding: 8px;
+    z-index: 100; /* Ensure it is on top of other elements */
+}
+
+.skip-link:focus {
+    top: 10px; /* Bring it back into the viewport when focused */
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 50px; /* Adjust the height as needed */
+    background-color: black;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+}
+
+.hamburger-menu {
+    position: relative;
+}
+
+.menu-icon {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.menu-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 50px; /* Adjust to position the menu below the icon */
+    right: 0;
+    background-color: black;
+    list-style: none;
+    padding: 10px;
+    border: 1px solid white;
+    width: 70px;
+}
+
+.menu li {
+    margin: 10px 0;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+#menu-toggle:checked + .menu-icon + .menu {
+    display: block;
+}
+
+main {
+    display: flex;
+    flex-direction: row; /* Arrange elements in a row */
+    align-items: flex-start; /* Align items at the top */
+    padding: 50px; /* Add padding to the main container */
+    box-sizing: border-box; /* Ensure padding is included in the total width and height */
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align items at the top */
+    margin-right: 50px; /* Space between the container and about-me section */
+}
+
+.top-section {
+    display: flex;
+    align-items: center; /* Vertically centers the items */
+    margin-bottom: 20px; /* Space below the top section */
+}
+
+.circle-image {
+    width: 50%; /* Use a percentage for responsive width */
+    max-width: 300px; /* Optional: set a maximum width to avoid the image being too large */
+    aspect-ratio: 1 / 1; /* Ensure it stays a square */
+    border-radius: 50%;
+    object-fit: cover; /* Ensures the image covers the entire area without stretching */
+    display: block; /* Ensures proper margin calculation */
+    color: white; /* Set default text color to white */
+}
+
+.text-container {
+    color: white;
+    margin-left: 20px; /* Space between the image and the text */
+    margin-bottom: 20px; /* Space below the text container */
+}
+
+.stark-image {
+    width: 100%; /* Make the image responsive */
+    max-width: 300px; /* Set a maximum width */
+    margin-top: 20px; /* Space above the new image */
+    display: block; /* Ensures proper margin calculation */
+}
+
+.about-me {
+    font-size: large;
+    max-width: 600px; /* Limit the width of the About Me section */
+    padding: 20px;
+    border: 1px solid white; /* Optional: add a border */
+    background-color: black; /* Ensure background is black */
+    overflow-y: auto; /* Allow vertical scrolling within the About Me section */
+    line-height: 25px;
+}
